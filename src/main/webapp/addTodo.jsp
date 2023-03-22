@@ -20,7 +20,7 @@
 		</nav>
 	</header>
 	<main>
-		<form method="post">
+		<form method="post" class="addForm">
 			<input name="Todotitle" placeholder="title"> 
 			<button type="submit">submit</button>
 		</form>
