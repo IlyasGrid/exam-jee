@@ -10,5 +10,6 @@ public interface Service {
 	public Todo updateTodo(Todo todo);
 	public Todo deleteTodo(Todo todo);
 	public Todo getTodo(String id);
+	public List<Todo> changePriority(Todo todo, String UpOrDwon);
 	public List<Todo> getAllTodos();
 }

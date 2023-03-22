@@ -10,8 +10,11 @@ public interface TodoDao {
 	Todo get(String id);
 
 	List<Todo> getAll();
+	
+	List<Todo> changePriority(Todo todo, String UpOrDwon);
 
 	Todo update(Todo todo);
 
 	Todo delete(Todo todo);
+
 }

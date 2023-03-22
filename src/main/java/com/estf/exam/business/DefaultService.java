@@ -44,5 +44,9 @@ public class DefaultService implements Service{
 	public List<Todo> getAllTodos() {
 		return todoDao.getAll();
 	}
+	@Override
+	public List<Todo> changePriority(Todo todo, String UpOrDwon) {
+		return todoDao.changePriority(todo, UpOrDwon);		
+	}
 
 }

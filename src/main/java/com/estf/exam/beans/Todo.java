@@ -1,24 +1,31 @@
 package com.estf.exam.beans;
 
+import java.util.UUID;
+
 public class Todo {
 
+//	static int  priorityIndex =0;
 	@Override
 	public String toString() {
-		return "Todo [id=" + id + ", title=" + title + ", completed=" + completed + "]";
+		return "Todo [id=" + id + ", title=" + title + ", priority=" + priority + "]";
 	}
 
 	private String id;
 	private String title;
-	private boolean completed;
+	private int priority;
 
 	public Todo() {
 
 	}
 
-	public Todo( String title, boolean completed) {
+	public Todo(String title,int priority) {
 		super();
+		String uuid = UUID.randomUUID().toString();
+		this.id = uuid;
 		this.title = title;
-		this.completed = completed;
+		this.priority =priority;
+//		this.priority = priorityIndex;
+//		priorityIndex++;
 	}
 
 	public String getId() {
@@ -37,12 +44,12 @@ public class Todo {
 		this.title = title;
 	}
 
-	public boolean isCompleted() {
-		return completed;
+	public int getpriority() {
+		return priority;
 	}
 
-	public void setCompleted(boolean completed) {
-		this.completed = completed;
+	public void setpriority(int priority) {
+		this.priority = priority;
 	}
 
 }
